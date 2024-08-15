@@ -1,7 +1,4 @@
 # pelican-chess-bot
 A chess bot
 
-## todo:
-1. Make the bot faster
-2. Improve evaluation
-3. Allow black and white
+Pelican chess bot is a simple chess bot made using html and js powered by a very simple minimax algorithm.

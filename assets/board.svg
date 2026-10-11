@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+  <defs>
+    <pattern id="chunk" x="0" y="0" width="0.25" height="0.25">
+      <rect x="0" y="0" width="1" height="1" fill="#eeeed2" />
+      <rect x="1" y="0" width="1" height="1" fill="#1caaaa" />
+      <rect x="0" y="1" width="1" height="1" fill="#1caaaa" />
+      <rect x="1" y="1" width="1" height="1" fill="#eeeed2" />
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="8" height="8" fill="url(#chunk)" />
+</svg>

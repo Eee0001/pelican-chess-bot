@@ -37,6 +37,7 @@ let selected = null;
 
 chessboard.onpointerdown = function (e) {
     console.log(e.target);
+    
     selected = e.target;
 
     ghost.dataset.piece = selected.dataset.piece;

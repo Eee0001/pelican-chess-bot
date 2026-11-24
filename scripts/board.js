@@ -38,23 +38,29 @@ let selected = null;
 chessboard.onpointerdown = function (e) {
     console.log(e.target);
     
-    selected = e.target;
-
-    ghost.dataset.piece = selected.dataset.piece;
+    if (e.target.dataset.piece !== NAMES[PIECES.EMPTY]) {
+        selected = e.target;
+    
+        ghost.dataset.piece = selected.dataset.piece;
+    
+        selected.dataset.piece = NAMES[PIECES.EMPTY];
+    }
 };
 
 chessboard.onpointerup = function (e) {
     console.log(e.target);
+    
+    if (selected) {
+        let piece = ghost.dataset.piece;
 
-    let piece = selected.dataset.piece;
+        selected.dataset.piece = NAMES[PIECES.EMPTY];
 
-    selected.dataset.piece = NAMES[PIECES.EMPTY];
+        e.target.dataset.piece = piece;
 
-    e.target.dataset.piece = piece;
+        ghost.dataset.piece = NAMES[PIECES.EMPTY];
 
-    ghost.dataset.piece = NAMES[PIECES.EMPTY];
-
-    selected = null;
+        selected = null;
+    }
 };
 
 let ghost = document.createElement("div");
